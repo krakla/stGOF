@@ -25,6 +25,7 @@ This is a basic example which shows you how to calculate smooth test PCB data
  which follows the normal distribution and using MLE as an estimation method
 
 `library(stGOF)`
+
 `stGOF(PRG ~ unif, PRG, order = 4, method = "MLE")`
 
 In addition, there are several functions to calculate the MLE, MME estimators.
