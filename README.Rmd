@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# stGOF
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of stGOF package is to return the smooth test result as descriped in 
+ Smooth Tests of Goodness of Fit Using R book by D. John Best, J. C. W. Rayner,
+ and Olivier Thas.smooth tests and data-driven smooth tests of goodness of fit 
+ can be performed for several distributions. The package also contains functions
+ for the construction of sets of orthonormal polynomials.
+
+## Installation
+
+You can install the development version of stGOF from [GitHub](https://github.com/krakla/stGOF) with:
+
+``` r
+install.packages("devtools")
+devtools::install_github("krakla/stGOF")
+```
+
+## Example
+
+This is a basic example which shows you how to calculate smooth test PCB data
+ which follows the normal distribution and using MLE as an estimation method
+
+```{r example}
+library(stGOF)
+stGOF(PCB ~ norm, PCB, order = 4, method = "MLE")
+```
+
+In addition, there are several functions to calculate the MLE, MME estimators.
+Also, there are functions can be used to construct of sets of orthonormal 
+polynomials. For example, here is the MLE estimator for pulse data.
+
+```{r example}
+norm.MLE(pulse)
+```

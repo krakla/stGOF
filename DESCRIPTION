@@ -1,0 +1,18 @@
+Package: stGOF
+Type: Package
+Title: The stGOF is designed to return the smooth test result as descriped in 
+ Smooth Tests of Goodness of Fit Using R book by D. John Best, J. C. W. Rayner, and Olivier Thas.
+Version: 0.1.0
+Author: person("Mahmoud", "ABU AZOUM", email = "mabuazoum@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: The package maintainer is Prof. Olivier Thas <olivier.thas@uhasselt.be>
+Description: smooth tests and data-driven smooth tests of goodness of
+        fit can be performed for several distributions. The package
+        also contains functions for the construction of sets of
+        orthonormal polynomials.
+License: GNU General Public License Version 2, June 1991
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.1)
+RoxygenNote: 7.2.0.9000
