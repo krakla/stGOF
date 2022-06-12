@@ -80,23 +80,23 @@ stGOF_DD <-
     }
 
     #Results
-    cat("       Result for Data-Driven Smooth goodness-of-fit test\n")
-    cat("       Null hypothesis:", distr, "against", max.order,
+    cat("  Result for Data-Driven Smooth goodness-of-fit test\n")
+    cat("  Null hypothesis:", distr, "against", max.order,
         "th order alternative\n")
-    cat("       Parameter estimation method:", method, "\n")
+    cat("  Parameter estimation method:", method, "\n")
 
     par_est <- "no parameter estimation needed"
     cat("       Parameter estimates:", pars, " (",names(pars),")\n\n")
 
-    cat("       Horizon:",horizon,"\n")
-    cat("       Selection criterion:",criterion,"\n\n")
+    cat("   Horizon:",horizon,"\n")
+    cat("   Selection criterion:",criterion,"\n\n")
 
-    cat("     All p-values are obtained by the bootstrap with", B, "runs\n")
+    cat("  All p-values are obtained by the bootstrap with", B, "runs\n")
     cat("\n")
 
-    cat("   Data-Driven Smooth test statistic S_k =", round(stat.dd, 5),
+    cat("  Data-Driven Smooth test statistic S_k =", round(stat.dd, 5),
         "p-value =", round(p.value, 5),"\n")
-    cat("    Selected model:",S.dd,"\n\n")
+    cat("  Selected model:",S.dd,"\n\n")
 
     invisible(list(stat=stat.dd,model=S.dd,p.value=p.value,par.est=par_est))
   }

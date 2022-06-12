@@ -54,14 +54,14 @@ stGOF_B <- function(distr="", data=NA, order=NULL, method = "", B = NULL,
   q <- length(statistics)
 
   #Results
-  cat("       Results of the Smooth test\n")
-  cat("       Ho:", distr_name, "against", order, "th order alternative\n")
-  cat("       Parameter estimation method:", method, "\n")
-  cat("       Parameter estimates:", pars, " (",names(pars),")\n\n")
+  cat("  Results of the Smooth test\n")
+  cat("  Ho:", distr_name, "against", order, "th order alternative\n")
+  cat("  Parameter estimation method:", method, "\n")
+  cat("  Parameter estimates:", pars, " (",names(pars),")\n\n")
   cat("\n")
 
 
-  cat("    All p-values are obtained by the bootstrap with", B, "runs\n\n")
+  cat("  All p-values are obtained by the bootstrap with", B, "runs\n\n")
 
   cat("\n")
 
@@ -71,7 +71,7 @@ stGOF_B <- function(distr="", data=NA, order=NULL, method = "", B = NULL,
 
   cnt <- 1
   for (i in (order - q + 2):order) {
-    cat("    ", i, "th empirically rescaled component V_k =", round(statistics[cnt], 5),
+    cat("  ", i, "th empirically rescaled component V_k =", round(statistics[cnt], 5),
         " p-value =", round(p_val[cnt],5), "\n")
 
     cnt <- cnt + 1

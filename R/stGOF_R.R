@@ -33,14 +33,14 @@ stGOF_R <- function(distr="", data=NA, order=NULL, method = "", output=TRUE)
   q <- length(statistics)
 
   #Results
-  cat("       Results of the Smooth test\n")
-  cat("       Ho:", distr_name, "against", order, "th order alternative\n")
-  cat("       Parameter estimation method:", method, "\n")
-  cat("       Parameter estimates:", pars, " (",names(pars),")\n\n")
+  cat("  Results of the Smooth test\n")
+  cat("  Ho:", distr_name, "against", order, "th order alternative\n")
+  cat("  Parameter estimation method:", method, "\n")
+  cat("  Parameter estimates:", pars, " (",names(pars),")\n\n")
   cat("\n")
 
 
-  cat("    All p-values are obtained by the asymptotical chi-square approximation", "\n")
+  cat("  All p-values are obtained by the asymptotical chi-square approximation", "\n")
 
   cat("\n")
 
@@ -51,7 +51,7 @@ stGOF_R <- function(distr="", data=NA, order=NULL, method = "", output=TRUE)
   cnt <- 1
   for (i in (order - q + 2):order) {
 
-    cat("    ", i, "th theoretically component V_k =", round(statistics[cnt], 5),
+    cat("  ", i, "th theoretically component V_k =", round(statistics[cnt], 5),
         " p-value =", round(p_val[cnt],5), "\n")
 
     cnt <- cnt + 1
