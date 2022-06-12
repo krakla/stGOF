@@ -1,11 +1,21 @@
-Untitled
+stGOF Package
 ================
 
 ## GitHub Documents
 
-This is an R Markdown format used for publishing markdown documents to
-GitHub. When you click the **Knit** button all R code chunks are run and
-a markdown file (.md) suitable for publishing to GitHub is generated.
+The stGOF is designed to Performs the smooth test for the one-sample
+goodness-of-fit problem as described by Rayner et al.(2009). Both simple
+and composite null hypotheses can be tested. The maximum likelihood
+(MLE) and the method of moments (MME) methods for nuisance parameter
+estimation are implemented. Function returns the score statistics of
+Smooth test result.
+
+The goal of stGOF package is to return the smooth test result as
+descriped in ***“Smooth Tests of Goodness of Fit Using R”*** book by D.
+John Best, J. C. W. Rayner, and Olivier Thas.smooth tests and
+data-driven smooth tests of goodness of fit can be performed for several
+distributions. The package also contains functions for the construction
+of sets of orthonormal polynomials.
 
 ## Including Code
 
