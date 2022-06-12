@@ -1,4 +1,4 @@
-# stGOF R package
+# stGOF R package 
 The stGOF is designed to Performs the smooth test for the one-sample goodness-of-fit 
 problem as described by Rayner et al.(2009). Both simple and composite null hypotheses 
 can be tested. The maximum likelihood (MLE) and the method of moments (MME) methods 
