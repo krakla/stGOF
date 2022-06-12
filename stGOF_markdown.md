@@ -98,11 +98,11 @@ stGOF(PCB ~ norm, PCB, order = 5, method = "MLE", B = 1000, rescale = T)
     ## 
     ## 
     ##     Smooth test statistic S_k : 9.7475 
-    ##                p-value        : 0.022 
+    ##                p-value        : 0.032 
     ## 
-    ##      3 th empirically rescaled component V_k ==> 1.49321  p-value ==> 0.144 
-    ##      4 th empirically rescaled component V_k ==> 1.21281  p-value ==> 0.088 
-    ##      5 th empirically rescaled component V_k ==> 0.35025  p-value ==> 0.738
+    ##      3 th empirically rescaled component V_k ==> 1.49321  p-value ==> 0.134 
+    ##      4 th empirically rescaled component V_k ==> 1.21281  p-value ==> 0.084 
+    ##      5 th empirically rescaled component V_k ==> 0.35025  p-value ==> 0.704
 
 ``` r
 stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order", criterion="AIC")
@@ -118,7 +118,7 @@ stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order",
     ## 
     ##      All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##    Data-Driven Smooth test statistic S_k ==> 9.5588 p-value ==> 0.023 
+    ##    Data-Driven Smooth test statistic S_k ==> 9.5588 p-value ==> 0.029 
     ##     Selected model: 3 4
 
 ``` r
@@ -135,7 +135,7 @@ stGOF(PCB ~ norm, PCB, method = "MME", B = 1000, max.order = 7, horizon="subset"
     ## 
     ##      All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##    Data-Driven Smooth test statistic S_k ==> 5.43692 p-value ==> 0.041 
+    ##    Data-Driven Smooth test statistic S_k ==> 5.43692 p-value ==> 0.037 
     ##     Selected model: 3
 
 ``` r
