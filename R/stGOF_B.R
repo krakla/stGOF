@@ -71,8 +71,8 @@ stGOF_B <- function(distr="", data=NA, order=NULL, method = "", B = NULL,
 
   cnt <- 1
   for (i in (order - q + 2):order) {
-    cat("    ", i, "th empirically rescaled component V_k ==>", round(statistics[cnt], 5),
-        " p-value ==>", round(p_val[cnt],5), "\n")
+    cat("    ", i, "th empirically rescaled component V_k =", round(statistics[cnt], 5),
+        " p-value =", round(p_val[cnt],5), "\n")
 
     cnt <- cnt + 1
   }

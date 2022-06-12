@@ -94,8 +94,8 @@ stGOF_DD <-
     cat("     All p-values are obtained by the bootstrap with", B, "runs\n")
     cat("\n")
 
-    cat("   Data-Driven Smooth test statistic S_k ==>", round(stat.dd, 5),
-        "p-value ==>", round(p.value, 5),"\n")
+    cat("   Data-Driven Smooth test statistic S_k =", round(stat.dd, 5),
+        "p-value =", round(p.value, 5),"\n")
     cat("    Selected model:",S.dd,"\n\n")
 
     invisible(list(stat=stat.dd,model=S.dd,p.value=p.value,par.est=par_est))
