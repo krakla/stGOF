@@ -34,7 +34,7 @@ summary(PRG)
 ggplot(data = data.frame(PRG), aes(x = PRG)) + 
   geom_histogram(bins = 30, color = "white", linetype = "longdash")
 p <- ggplot2::ggplot(data = data.frame(PRG), aes(x = PRG)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 ```{r}
@@ -42,7 +42,7 @@ summary(PCB)
 ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
   geom_histogram(bins = 30, color = "white", linetype = "longdash")
 p <- ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 
@@ -51,16 +51,16 @@ summary(pulse)
 ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
   geom_histogram(binwidth = 12 ,color = "white", linetype = "longdash")
 p <- ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 
 ```{r}
 summary(cultivars)
 ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
-  geom_histogram(color = "white", linetype = "longdash")
+  geom_histogram(bins = 30, color = "white", linetype = "longdash")
 p <- ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 

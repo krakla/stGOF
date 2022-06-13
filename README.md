@@ -51,7 +51,7 @@ ggplot(data = data.frame(PRG), aes(x = PRG)) +
 
 ``` r
 p <- ggplot2::ggplot(data = data.frame(PRG), aes(x = PRG)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 
@@ -73,7 +73,7 @@ ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) +
 
 ``` r
 p <- ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 
@@ -95,7 +95,7 @@ ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) +
 
 ``` r
 p <- ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 
@@ -110,16 +110,14 @@ summary(cultivars)
 
 ``` r
 ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
-  geom_histogram(color = "white", linetype = "longdash")
+  geom_histogram(bins = 30, color = "white", linetype = "longdash")
 ```
-
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 p <- ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
-  geom_boxplot()
+  geom_boxplot() + xlab("")
 p + coord_flip()
 ```
 
@@ -233,12 +231,12 @@ stGOF(PCB ~ norm, PCB, order = 6, method = "MLE", B = 1000, rescale = TRUE)
     ## 
     ## 
     ##     Smooth test statistic S_k : 10.1826 
-    ##                p-value        : 0.024 
+    ##                p-value        : 0.027 
     ## 
-    ##    3 th empirically rescaled component V_k = 1.49321  p-value = 0.156 
-    ##    4 th empirically rescaled component V_k = 1.21281  p-value = 0.088 
-    ##    5 th empirically rescaled component V_k = 0.35025  p-value = 0.738 
-    ##    6 th empirically rescaled component V_k = -0.97439  p-value = 0.3
+    ##    3 th empirically rescaled component V_k = 1.49321  p-value = 0.146 
+    ##    4 th empirically rescaled component V_k = 1.21281  p-value = 0.08 
+    ##    5 th empirically rescaled component V_k = 0.35025  p-value = 0.748 
+    ##    6 th empirically rescaled component V_k = -0.97439  p-value = 0.334
 
 ``` r
 stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order", criterion="AIC")
@@ -254,7 +252,7 @@ stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order",
     ## 
     ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.026 
+    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.028 
     ##   Selected model: 3 4
 
 ``` r
@@ -271,5 +269,5 @@ stGOF(PCB ~ norm, PCB, method = "MME", B = 1000, max.order = 7, horizon="subset"
     ## 
     ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.032 
+    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.037 
     ##   Selected model: 3
