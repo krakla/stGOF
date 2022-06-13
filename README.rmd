@@ -63,6 +63,3 @@ stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order",
 stGOF(PCB ~ norm, PCB, method = "MME", B = 1000, max.order = 7, horizon="subset", criterion="BIC")
 ```
 
-```{r}
-stGOF(pulse ~ pois, PCB, method = "MME", B = 1000, max.order = 8, horizon="subset", criterion="BIC")
-```

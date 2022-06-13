@@ -41,21 +41,21 @@ library(stGOF)
 stGOF(PRG ~ unif, PRG, order = 4, method = "MLE")
 ```
 
-    ##        Results of the Smooth test
-    ##        Ho: Uniform against 4 th order alternative
-    ##        Parameter estimation method: MLE 
-    ##        Parameter estimates: 2.463115e-06 0.9999763  ( min max )
+    ##   Results of the Smooth test
+    ##   Ho: Uniform against 4 th order alternative
+    ##   Parameter estimation method: MLE 
+    ##   Parameter estimates: 2.463115e-06 0.9999763  ( min max )
     ## 
     ## 
-    ##     All p-values are obtained by the asymptotical chi-square approximation 
+    ##   All p-values are obtained by the asymptotical chi-square approximation 
     ## 
     ##     Smooth test statistic S_k : 4.2645 
     ##                p-value        : 1 
     ## 
-    ##      1 th theoretically component V_k = -1.01504  p-value = 0.31009 
-    ##      2 th theoretically component V_k = -0.30575  p-value = 0.75979 
-    ##      3 th theoretically component V_k = -1.42447  p-value = 0.36256 
-    ##      4 th theoretically component V_k = -1.05431  p-value = 0.29174
+    ##    1 th theoretically component V_k = -1.01504  p-value = 0.31009 
+    ##    2 th theoretically component V_k = -0.30575  p-value = 0.75979 
+    ##    3 th theoretically component V_k = -1.42447  p-value = 0.36256 
+    ##    4 th theoretically component V_k = -1.05431  p-value = 0.29174
 
 In addition, there are several functions to calculate the MLE, MME
 estimators. Also, there are functions can be used to construct of sets
@@ -70,129 +70,112 @@ pulse data.
 stGOF(PCB ~ norm, PCB, order = 4, method = "MLE")
 ```
 
-    ##        Results of the Smooth test
-    ##        Ho: Normal against 4 th order alternative
-    ##        Parameter estimation method: MLE 
-    ##        Parameter estimates: 210 72.26383  ( mean sd )
+    ##   Results of the Smooth test
+    ##   Ho: Normal against 4 th order alternative
+    ##   Parameter estimation method: MLE 
+    ##   Parameter estimates: 210 72.26383  ( mean sd )
     ## 
     ## 
-    ##     All p-values are obtained by the asymptotical chi-square approximation 
+    ##   All p-values are obtained by the asymptotical chi-square approximation 
     ## 
     ##     Smooth test statistic S_k : 9.5588 
     ##                p-value        : 0.0084 
     ## 
-    ##      3 th theoretically component V_k = 2.33172  p-value = 0.01972 
-    ##      4 th theoretically component V_k = 2.03024  p-value = 0.04233
+    ##    3 th theoretically component V_k = 2.33172  p-value = 0.01972 
+    ##    4 th theoretically component V_k = 2.03024  p-value = 0.04233
 
 ``` r
 stGOF(PCB ~ norm, PCB, order = 6, method = "MLE")
 ```
 
-    ##        Results of the Smooth test
-    ##        Ho: Normal against 6 th order alternative
-    ##        Parameter estimation method: MLE 
-    ##        Parameter estimates: 210 72.26383  ( mean sd )
+    ##   Results of the Smooth test
+    ##   Ho: Normal against 6 th order alternative
+    ##   Parameter estimation method: MLE 
+    ##   Parameter estimates: 210 72.26383  ( mean sd )
     ## 
     ## 
-    ##     All p-values are obtained by the asymptotical chi-square approximation 
+    ##   All p-values are obtained by the asymptotical chi-square approximation 
     ## 
     ##     Smooth test statistic S_k : 10.1826 
     ##                p-value        : 0.03746 
     ## 
-    ##      3 th theoretically component V_k = 2.33172  p-value = 0.01972 
-    ##      4 th theoretically component V_k = 2.03024  p-value = 0.04233 
-    ##      5 th theoretically component V_k = 0.43434  p-value = 0.66404 
-    ##      6 th theoretically component V_k = -0.65966  p-value = 0.50947
+    ##    3 th theoretically component V_k = 2.33172  p-value = 0.01972 
+    ##    4 th theoretically component V_k = 2.03024  p-value = 0.04233 
+    ##    5 th theoretically component V_k = 0.43434  p-value = 0.66404 
+    ##    6 th theoretically component V_k = -0.65966  p-value = 0.50947
 
 ``` r
 stGOF(PCB ~ norm, PCB, order = 7, method = "MLE")
 ```
 
-    ##        Results of the Smooth test
-    ##        Ho: Normal against 7 th order alternative
-    ##        Parameter estimation method: MLE 
-    ##        Parameter estimates: 210 72.26383  ( mean sd )
+    ##   Results of the Smooth test
+    ##   Ho: Normal against 7 th order alternative
+    ##   Parameter estimation method: MLE 
+    ##   Parameter estimates: 210 72.26383  ( mean sd )
     ## 
     ## 
-    ##     All p-values are obtained by the asymptotical chi-square approximation 
+    ##   All p-values are obtained by the asymptotical chi-square approximation 
     ## 
     ##     Smooth test statistic S_k : 10.5948 
     ##                p-value        : 0.06003 
     ## 
-    ##      3 th theoretically component V_k = 2.33172  p-value = 0.01972 
-    ##      4 th theoretically component V_k = 2.03024  p-value = 0.04233 
-    ##      5 th theoretically component V_k = 0.43434  p-value = 0.66404 
-    ##      6 th theoretically component V_k = -0.65966  p-value = 0.50947 
-    ##      7 th theoretically component V_k = -0.642  p-value = 0.52087
+    ##    3 th theoretically component V_k = 2.33172  p-value = 0.01972 
+    ##    4 th theoretically component V_k = 2.03024  p-value = 0.04233 
+    ##    5 th theoretically component V_k = 0.43434  p-value = 0.66404 
+    ##    6 th theoretically component V_k = -0.65966  p-value = 0.50947 
+    ##    7 th theoretically component V_k = -0.642  p-value = 0.52087
 
 ``` r
 stGOF(PCB ~ norm, PCB, order = 6, method = "MLE", B = 1000, rescale = TRUE)
 ```
 
-    ##        Results of the Smooth test
-    ##        Ho: Normal against 6 th order alternative
-    ##        Parameter estimation method: MLE 
-    ##        Parameter estimates: 210 72.26383  ( mean sd )
+    ##   Results of the Smooth test
+    ##   Ho: Normal against 6 th order alternative
+    ##   Parameter estimation method: MLE 
+    ##   Parameter estimates: 210 72.26383  ( mean sd )
     ## 
     ## 
-    ##     All p-values are obtained by the bootstrap with 1000 runs
+    ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
     ## 
     ##     Smooth test statistic S_k : 10.1826 
-    ##                p-value        : 0.022 
+    ##                p-value        : 0.031 
     ## 
-    ##      3 th empirically rescaled component V_k = 1.49321  p-value = 0.16 
-    ##      4 th empirically rescaled component V_k = 1.21281  p-value = 0.096 
-    ##      5 th empirically rescaled component V_k = 0.35025  p-value = 0.764 
-    ##      6 th empirically rescaled component V_k = -0.97439  p-value = 0.326
+    ##    3 th empirically rescaled component V_k = 1.49321  p-value = 0.176 
+    ##    4 th empirically rescaled component V_k = 1.21281  p-value = 0.1 
+    ##    5 th empirically rescaled component V_k = 0.35025  p-value = 0.704 
+    ##    6 th empirically rescaled component V_k = -0.97439  p-value = 0.31
 
 ``` r
 stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order", criterion="AIC")
 ```
 
-    ##        Result for Data-Driven Smooth goodness-of-fit test
-    ##        Null hypothesis: norm against 7 th order alternative
-    ##        Parameter estimation method: MLE 
+    ##   Result for Data-Driven Smooth goodness-of-fit test
+    ##   Null hypothesis: norm against 7 th order alternative
+    ##   Parameter estimation method: MLE 
     ##        Parameter estimates: 210 72.26383  ( mean sd )
     ## 
-    ##        Horizon: order 
-    ##        Selection criterion: AIC 
+    ##    Horizon: order 
+    ##    Selection criterion: AIC 
     ## 
-    ##      All p-values are obtained by the bootstrap with 1000 runs
+    ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##    Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.032 
-    ##     Selected model: 3 4
+    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.024 
+    ##   Selected model: 3 4
 
 ``` r
 stGOF(PCB ~ norm, PCB, method = "MME", B = 1000, max.order = 7, horizon="subset", criterion="BIC")
 ```
 
-    ##        Result for Data-Driven Smooth goodness-of-fit test
-    ##        Null hypothesis: norm against 7 th order alternative
-    ##        Parameter estimation method: MME 
+    ##   Result for Data-Driven Smooth goodness-of-fit test
+    ##   Null hypothesis: norm against 7 th order alternative
+    ##   Parameter estimation method: MME 
     ##        Parameter estimates: 210 72.26383  ( mean sd )
     ## 
-    ##        Horizon: subset 
-    ##        Selection criterion: BIC 
+    ##    Horizon: subset 
+    ##    Selection criterion: BIC 
     ## 
-    ##      All p-values are obtained by the bootstrap with 1000 runs
+    ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##    Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.037 
-    ##     Selected model: 3
-
-``` r
-stGOF(pulse ~ pois, PCB, method = "MME", B = 1000, max.order = 8, horizon="subset", criterion="BIC")
-```
-
-    ##        Result for Data-Driven Smooth goodness-of-fit test
-    ##        Null hypothesis: pois against 8 th order alternative
-    ##        Parameter estimation method: MME 
-    ##        Parameter estimates: 210  ( lambda )
-    ## 
-    ##        Horizon: subset 
-    ##        Selection criterion: BIC 
-    ## 
-    ##      All p-values are obtained by the bootstrap with 1000 runs
-    ## 
-    ##    Data-Driven Smooth test statistic S_k = 1.296961e+13 p-value = 0 
-    ##     Selected model: 2 3 4 5 6 7 8
+    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.033 
+    ##   Selected model: 3
