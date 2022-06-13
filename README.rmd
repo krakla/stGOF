@@ -43,9 +43,16 @@ In addition, there are several functions to calculate the MLE, MME estimators. A
 ```{r}
 stGOF(PCB ~ norm, PCB, order = 4, method = "MLE")
 ```
+```{r}
+stGOF(PCB ~ norm, PCB, order = 6, method = "MLE")
+```
 
 ```{r}
-stGOF(PCB ~ norm, PCB, order = 5, method = "MLE", B = 1000, rescale = T)
+stGOF(PCB ~ norm, PCB, order = 7, method = "MLE")
+```
+
+```{r}
+stGOF(PCB ~ norm, PCB, order = 6, method = "MLE", B = 1000, rescale = TRUE)
 ```
 
 ```{r}
