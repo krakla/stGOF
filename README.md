@@ -26,9 +26,104 @@ You can install the development version of stGOF from
 
 `devtools::install_github("krakla/stGOF")`
 
-## Including Plots
+``` r
+library(stGOF)
+```
 
-You can also embed plots, for example:
+## Data
+
+#### PCB dataset
+
+``` r
+library(ggplot2)
+summary(PRG)
+```
+
+    ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+    ## 0.0000025 0.2478207 0.5007882 0.4990628 0.7486094 0.9999763
+
+``` r
+ggplot(data = data.frame(PRG), aes(x = PRG)) + 
+  geom_histogram(bins = 30, color = "white", linetype = "longdash")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+``` r
+p <- ggplot2::ggplot(data = data.frame(PRG), aes(x = PRG)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
+![](README_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
+
+``` r
+summary(PCB)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ##      46     171     205     210     237     452
+
+``` r
+ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
+  geom_histogram(bins = 30, color = "white", linetype = "longdash")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+``` r
+p <- ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+
+``` r
+summary(pulse)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ##    64.0    80.0    80.0    82.3    84.0   116.0
+
+``` r
+ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
+  geom_histogram(binwidth = 12 ,color = "white", linetype = "longdash")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+p <- ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+
+``` r
+summary(cultivars)
+```
+
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ## -11.050  -2.175   2.850   2.068   5.025  17.400
+
+``` r
+ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
+  geom_histogram(color = "white", linetype = "longdash")
+```
+
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+``` r
+p <- ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
+![](README_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 ## Example
 
@@ -37,7 +132,6 @@ data which follows the normal distribution and using MLE as an
 estimation method
 
 ``` r
-library(stGOF)
 stGOF(PRG ~ unif, PRG, order = 4, method = "MLE")
 ```
 
@@ -139,12 +233,12 @@ stGOF(PCB ~ norm, PCB, order = 6, method = "MLE", B = 1000, rescale = TRUE)
     ## 
     ## 
     ##     Smooth test statistic S_k : 10.1826 
-    ##                p-value        : 0.031 
+    ##                p-value        : 0.024 
     ## 
-    ##    3 th empirically rescaled component V_k = 1.49321  p-value = 0.176 
-    ##    4 th empirically rescaled component V_k = 1.21281  p-value = 0.1 
-    ##    5 th empirically rescaled component V_k = 0.35025  p-value = 0.704 
-    ##    6 th empirically rescaled component V_k = -0.97439  p-value = 0.31
+    ##    3 th empirically rescaled component V_k = 1.49321  p-value = 0.156 
+    ##    4 th empirically rescaled component V_k = 1.21281  p-value = 0.088 
+    ##    5 th empirically rescaled component V_k = 0.35025  p-value = 0.738 
+    ##    6 th empirically rescaled component V_k = -0.97439  p-value = 0.3
 
 ``` r
 stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order", criterion="AIC")
@@ -160,7 +254,7 @@ stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order",
     ## 
     ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.024 
+    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.026 
     ##   Selected model: 3 4
 
 ``` r
@@ -177,5 +271,5 @@ stGOF(PCB ~ norm, PCB, method = "MME", B = 1000, max.order = 7, horizon="subset"
     ## 
     ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.033 
+    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.032 
     ##   Selected model: 3

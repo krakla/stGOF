@@ -21,22 +21,65 @@ You can install the development version of stGOF from [GitHub](https://github.co
 
 `devtools::install_github("krakla/stGOF")`
 
-## Including Plots
+```{r}
+library(stGOF)
+```
 
-You can also embed plots, for example:
+## Data
+
+#### PCB dataset
+```{r}
+library(ggplot2)
+summary(PRG)
+ggplot(data = data.frame(PRG), aes(x = PRG)) + 
+  geom_histogram(bins = 30, color = "white", linetype = "longdash")
+p <- ggplot2::ggplot(data = data.frame(PRG), aes(x = PRG)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+```{r}
+summary(PCB)
+ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
+  geom_histogram(bins = 30, color = "white", linetype = "longdash")
+p <- ggplot2::ggplot(data = data.frame(PCB), aes(x = PCB)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
+```{r}
+summary(pulse)
+ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
+  geom_histogram(binwidth = 12 ,color = "white", linetype = "longdash")
+p <- ggplot2::ggplot(data = data.frame(pulse), aes(x = pulse)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
+```{r}
+summary(cultivars)
+ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
+  geom_histogram(color = "white", linetype = "longdash")
+p <- ggplot2::ggplot(data = data.frame(cultivars), aes(x = cultivars)) + 
+  geom_boxplot()
+p + coord_flip()
+```
+
 
 ## Example
 
 This is a basic example which shows you how to calculate smooth test PCB data which follows the normal distribution and using MLE as an estimation method
 
 ```{r}
-library(stGOF)
 stGOF(PRG ~ unif, PRG, order = 4, method = "MLE")
 ```
 
 In addition, there are several functions to calculate the MLE, MME estimators. Also, there are functions can be used to construct of sets of orthonormal polynomials. For example, here is the MLE estimator for pulse data.
 
 `norm.MLE(pulse)`
+
+
+
+
 
 #### Other examples
 
