@@ -144,10 +144,10 @@ stGOF(PRG ~ unif, PRG, order = 4, method = "MLE")
     ##     Smooth test statistic S_k : 4.2645 
     ##                p-value        : 1 
     ## 
-    ##    1 th theoretically component V_k = -1.01504  p-value = 0.31009 
-    ##    2 th theoretically component V_k = -0.30575  p-value = 0.75979 
-    ##    3 th theoretically component V_k = -1.42447  p-value = 0.36256 
-    ##    4 th theoretically component V_k = -1.05431  p-value = 0.29174
+    ##    1 th component V_k = -1.01504  p-value = 0.31009 
+    ##    2 th component V_k = -0.30575  p-value = 0.75979 
+    ##    3 th component V_k = -1.42447  p-value = 0.36256 
+    ##    4 th component V_k = -1.05431  p-value = 0.29174
 
 In addition, there are several functions to calculate the MLE, MME
 estimators. Also, there are functions can be used to construct of sets
@@ -173,8 +173,8 @@ stGOF(PCB ~ norm, PCB, order = 4, method = "MLE")
     ##     Smooth test statistic S_k : 9.5588 
     ##                p-value        : 0.0084 
     ## 
-    ##    3 th theoretically component V_k = 2.33172  p-value = 0.01972 
-    ##    4 th theoretically component V_k = 2.03024  p-value = 0.04233
+    ##    3 th component V_k = 2.33172  p-value = 0.01972 
+    ##    4 th component V_k = 2.03024  p-value = 0.04233
 
 ``` r
 stGOF(PCB ~ norm, PCB, order = 6, method = "MLE")
@@ -191,10 +191,10 @@ stGOF(PCB ~ norm, PCB, order = 6, method = "MLE")
     ##     Smooth test statistic S_k : 10.1826 
     ##                p-value        : 0.03746 
     ## 
-    ##    3 th theoretically component V_k = 2.33172  p-value = 0.01972 
-    ##    4 th theoretically component V_k = 2.03024  p-value = 0.04233 
-    ##    5 th theoretically component V_k = 0.43434  p-value = 0.66404 
-    ##    6 th theoretically component V_k = -0.65966  p-value = 0.50947
+    ##    3 th component V_k = 2.33172  p-value = 0.01972 
+    ##    4 th component V_k = 2.03024  p-value = 0.04233 
+    ##    5 th component V_k = 0.43434  p-value = 0.66404 
+    ##    6 th component V_k = -0.65966  p-value = 0.50947
 
 ``` r
 stGOF(PCB ~ norm, PCB, order = 7, method = "MLE")
@@ -211,11 +211,11 @@ stGOF(PCB ~ norm, PCB, order = 7, method = "MLE")
     ##     Smooth test statistic S_k : 10.5948 
     ##                p-value        : 0.06003 
     ## 
-    ##    3 th theoretically component V_k = 2.33172  p-value = 0.01972 
-    ##    4 th theoretically component V_k = 2.03024  p-value = 0.04233 
-    ##    5 th theoretically component V_k = 0.43434  p-value = 0.66404 
-    ##    6 th theoretically component V_k = -0.65966  p-value = 0.50947 
-    ##    7 th theoretically component V_k = -0.642  p-value = 0.52087
+    ##    3 th component V_k = 2.33172  p-value = 0.01972 
+    ##    4 th component V_k = 2.03024  p-value = 0.04233 
+    ##    5 th component V_k = 0.43434  p-value = 0.66404 
+    ##    6 th component V_k = -0.65966  p-value = 0.50947 
+    ##    7 th component V_k = -0.642  p-value = 0.52087
 
 ``` r
 stGOF(PCB ~ norm, PCB, order = 6, method = "MLE", B = 1000, rescale = TRUE)
@@ -231,12 +231,12 @@ stGOF(PCB ~ norm, PCB, order = 6, method = "MLE", B = 1000, rescale = TRUE)
     ## 
     ## 
     ##     Smooth test statistic S_k : 10.1826 
-    ##                p-value        : 0.027 
+    ##                p-value        : 0.04 
     ## 
-    ##    3 th empirically rescaled component V_k = 1.49321  p-value = 0.146 
-    ##    4 th empirically rescaled component V_k = 1.21281  p-value = 0.08 
-    ##    5 th empirically rescaled component V_k = 0.35025  p-value = 0.748 
-    ##    6 th empirically rescaled component V_k = -0.97439  p-value = 0.334
+    ##    3 th component V_k = 1.49321  p-value = 0.172 
+    ##    4 th component V_k = 1.21281  p-value = 0.096 
+    ##    5 th component V_k = 0.35025  p-value = 0.734 
+    ##    6 th component V_k = -0.97439  p-value = 0.29
 
 ``` r
 stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order", criterion="AIC")
@@ -252,7 +252,7 @@ stGOF(PCB ~ norm, PCB, method = "MLE", B = 1000, max.order = 7, horizon="order",
     ## 
     ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.028 
+    ##   Data-Driven Smooth test statistic S_k = 9.5588 p-value = 0.035 
     ##   Selected model: 3 4
 
 ``` r
@@ -269,5 +269,5 @@ stGOF(PCB ~ norm, PCB, method = "MME", B = 1000, max.order = 7, horizon="subset"
     ## 
     ##   All p-values are obtained by the bootstrap with 1000 runs
     ## 
-    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.037 
+    ##   Data-Driven Smooth test statistic S_k = 5.43692 p-value = 0.045 
     ##   Selected model: 3
